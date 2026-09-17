@@ -1,0 +1,16 @@
+body{
+	background-color: #DAB1DA;
+}
+
+.img {
+	width: 250px;
+	height: 300 ;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+h1, p {
+	text-align: center;
+}
+

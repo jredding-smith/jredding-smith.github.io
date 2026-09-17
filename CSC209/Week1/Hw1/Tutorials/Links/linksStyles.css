@@ -1,0 +1,15 @@
+body{
+	background-color: #00b3b3;
+}
+
+a:link{
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:hover{
+	color: red;
+	background-color: transparent;
+	text-decoration: none;
+}

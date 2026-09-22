@@ -1,0 +1,20 @@
+body{
+	background-color: #ffffd4;
+}
+
+header{
+	background-color: white;
+}
+
+h1{
+	text-align: center;
+	color: pink;
+}
+
+footer{
+	background-color: black;
+}
+
+#bottom{
+	color: white;
+}

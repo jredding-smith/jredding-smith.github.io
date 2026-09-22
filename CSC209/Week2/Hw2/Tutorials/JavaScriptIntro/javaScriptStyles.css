@@ -1,0 +1,13 @@
+h1{
+	text-align: center;
+}
+
+body{
+	background-color: #ADD8E6;
+}
+
+
+button:hover{
+	background-color: #00008B;
+	color: white;
+}

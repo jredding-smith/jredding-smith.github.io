@@ -1,0 +1,37 @@
+body {
+	background-color: #F3F9D2;
+	margin: 0;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 130px;
+	background-color: #C0D684;
+	position: absolute;
+	height: 130%;
+	overflow: auto;
+}
+
+li a{ 
+	display: block;
+	color: black;
+	padding: 15px 16px;
+	text-decoration: none;
+}
+
+li a:hover{
+	background-color: #3D0B37;
+	color: white;
+}
+
+h1,h3 {
+	text-align: center;
+}
+
+.main{
+	margin-left: 130px;
+	padding: 1px 16px;
+	height: 100%;
+}

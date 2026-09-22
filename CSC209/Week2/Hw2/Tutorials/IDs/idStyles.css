@@ -1,0 +1,21 @@
+h1{
+	color: white;
+}
+
+#myHeader{
+	background-color: pink;
+	padding: 10px;
+	color: black;
+}
+
+body{
+	background-color: black;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: pink;
+}

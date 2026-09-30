@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> This is a website to show visuals via a CANVAS </title>
+	<link rel="stylesheet" href="canvasPracticeStylesExtened.css">
+	<!-- Contains all the JavaScript local variables -->
+	<script> 
+	</script> 
+</head>
+<body>
+	<h1> Below is a my canvas </h1>
+	<hr>
+	<div id="information_edge"> </div> 
+	<div id="information_points"> </div>
+		
+		
+	
+	<canvas id="myCanvas" width="500" height="500"> Hello ?  </canvas> 
+	
+	
+	<!-- Below is the JavaScript needed to draw elements to the canvas  -->
+	<script> 
+		// Global variables that need to be rendered after the HTML is read//
+		const NUM_EDGES = 2;
+		const NUM_POINTS = 5;
+		const POINTCOLOR = "pink";
+		const POINTRADIUS = 20; 
+		var CANVAS = document.getElementById("myCanvas");
+		var DRAW = CANVAS.getContext("2d");
+		
+		let edge_has = "Number of edges shown: " + NUM_EDGES;
+		let point_has = "Number of points shown: " + NUM_POINTS; 
+		
+		document.getElementById("information_edge").innerText += edge_has
+
+		document.getElementById("information_points").innerHTML += point_has
+		// The drawing of a circle and my name at certain points of the canvas // 
+		
+		class point{
+			
+			constructor(x, y){
+				this.x = x;
+				this.y = y;
+			}
+			
+			drawingShape(DRAW){
+				DRAW.beginPath();
+				DRAW.arc(this.x,this.y, POINTRADIUS, 0,2*Math.PI);
+				DRAW.stroke(); 
+			}
+			
+			drawLabel(DRAW, text){
+				DRAW.font = "15px Arial";
+				DRAW.fillText(text, (this.x - 50), (this.y + 50));
+			}
+		}
+
+		class points extends Array{
+			var randomAmountCircle = Math.floor(Math.random() * NUM_POINTS)
+			
+			for(i = 1; i < randomAmountCircle + 1; i ++){
+				var 
+			}
+		}
+			
+		
+		class Edge{
+			
+		}
+		
+		class Edges{
+			
+		}
+		
+		for(i = 1; i < 6; i++){
+			var manyPoints = new point(((i * 100)), 250);
+			manyPoints.drawingShape(DRAW);
+			var insertedText = "the " + i + "th circle";
+			manyPoints.drawLabel(DRAW, insertedText);
+		}
+		
+		
+		
+		
+		
+		
+		
+		// function drawCirc(x, y, r){
+		//	DRAW.beginPath();
+		//	DRAW.arc(x,y, r, 0,2*Math.PI);
+		//	DRAW.stroke(); 
+		//	DRAW.font = "20px Arial";
+		//	DRAW.fillText("Jode Redding", 20, 60);
+		// }
+		
+		// function addName(x, y){
+		// 	DRAW.font = "20px Arial";
+		//	DRAW.fillText("Jode Redding", 20, 60);
+		//}
+		
+		
+		//drawCirc(200, 250, 40);
+		//addName(20)
+		// CIRC.beginPath();
+		// CIRC.arc(200,250, 40, 0,2*Math.PI);
+		// CIRC.stroke(); 
+		// CIRC.font = "20px Arial";
+		// CIRC.fillText("Jode Redding", 20, 60);
+
+		// Showing the amount of points and the amount of edges in the HTML // 
+		
+		
+
+
+	</script>
+</body>
+</html>

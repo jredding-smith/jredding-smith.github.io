@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> This is a website to show visuals via a CANVAS </title>
+	<link rel="stylesheet" href="canvasPracticeStyles.css">
+	<!-- Contains all the JavaScript local variables -->
+	<script> </script> 
+</head>
+<body>
+	<h1> Below is a my canvas </h1>
+	<hr>
+	<canvas id="myCanvas" width="500" height="500"> Hello ?  </canvas> 
+	
+	
+	<!-- Below is the JavaScript needed to draw elements to the canvas  -->
+	<script> 
+		var CANVAS = document.getElementById("myCanvas");
+		var CIRC = CANVAS.getContext("2d");
+		
+		
+		CIRC.beginPath();
+		CIRC.arc(200,250, 40, 0,2*Math.PI);
+		CIRC.stroke(); 
+		CIRC.font = "20px Arial";
+		CIRC.fillText("Jode Redding", 20, 60)
+	</script>
+</body>
+</html>

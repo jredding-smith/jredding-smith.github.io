@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> General tutorial Website</title>
+	<link rel="stylesheet" href="tutorialStyle.css">
+</head>
+<body>
+	<header>
+		<h1> General tutorials</h1>
+		<p> There are a lot of tutorials for this homework, so instead of multiple pages Im just going to do this one large mastery page </p>
+		<div class="button">
+		<button onclick="moreInfo()" id="generalInfo"> Read / learn more </button>
+		<a href="../hw3.html"> Home </a>
+		<a href=./ImageChanging/javaScriptImgChange.html> Image Change tutorial </a>
+		</div>
+		<div id="generalInfoDisplay" style="display: none;"> Normally, when doing pages, I would separate my JavaScript from my HTML, similarly for my CSS. However, when doing some things with JavaScript, I've found that having the CSS within the element tag works better. Moreover, there might be some CSS within the element tag, with others being on a separate page. To add, I will be conducting all JavaScript within this HTML file, simply because of how much there is and wanting to keep everything in one place for simplicity </div>
+	</header>
+	<hr>
+	
+	<h3> Testing Ternary Operators </h3>
+	<p id="dateDepend"> </p>
+	<hr>
+	<h3> Testing switch </h3>
+	<p id="dayOfWeek"> </p> 
+	<hr>
+	
+	<h3> for loop testing </h3>
+	<p id="loops"> </p>
+	<hr>
+	
+	<h3>
+	
+	
+	<script>
+		// class hideShowButton{
+		//	constructor(id, div){
+		//		this.id = id;
+		//		this.div = div;
+		//	}	
+		//	action(){		
+		//	}
+		//}
+		
+		
+		
+		function moreInfo(){
+			let x = document.getElementById("generalInfoDisplay");
+			if (x.style.display === "none"){
+				x.style.display = "block"
+				document.querySelector('#generalInfo').textContent = "Hide";
+			} else {
+				x.style.display = "none"
+				document.querySelector('#generalInfo').textContent = "Read / learn more";
+			}
+		}
+		
+		let date = new Date();
+		let day = date.getDate();
+		let day_1 = date.getDay()
+		var spacificDay = (day < 15) ? "First half of the month" : "Second half of the month";
+		document.querySelector('#dateDepend').textContent = spacificDay;
+		
+	
+		let letterDay = "";
+		switch(day_1){
+	    case 0:
+	      letterDay = "Sunday";
+	      break;
+	    case 1:
+	      letterDay = "Monday";
+	      break;
+	    case 2:
+	       letterDay = "Tuesday";
+	      break;
+	    case 3:
+	      letterDay = "Wednesday";
+	      break;
+	    case 4:
+	      letterDay = "Thursday";
+	      break;
+	    case 5:
+	      letterDay = "Friday";
+	      break;
+	    case 6:
+	      letterDay = "Saturday";
+		}
+		let theDayAsText = `The day of the week is: ${letterDay}`;
+		document.getElementById('dayOfWeek').innerHTML = theDayAsText;
+		
+		const ranText = ["Thing 1", "Thing 2", "Thing 3", "Thing 4"];
+		let text = ""
+		for(let i = 0; i < ranText.length; i++){
+			text += ranText[i] + "<br>";
+			document.getElementById('loops').innerHTML = text;
+			
+		}
+		
+	</script> 
+</body>
+</html>
